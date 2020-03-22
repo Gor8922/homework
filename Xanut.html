@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Խանութ</title>
+</head>
+
+<body>
+    <script>
+        let productcost;
+        let product = +prompt("1-Կոստյում 110000, 2-Կոշիկ 120000, 3-Վերնաշապիկ 20000");
+        if (product == 1) {
+            productcost = 110000;
+        } else if (product == 2) {
+            productcost = 120000;
+        } else if (product == 3) {
+            productcost = 20000;
+        } else {
+            alert("Սխալ");
+        }
+        if (product == 1 || product == 2 || product == 3) {
+            let vchar = +prompt("yntreq 1-kanxik , 2-ankanxik");
+            if (vchar == 1 && (product == 1 || product == 2)) {
+                productcost = productcost - productcost * 30 / 100;
+                alert("vercreq apranq " + productcost + " vchareq");
+            } else if (vchar==1 && product==3){
+                productcost = productcost;
+                alert("vercreq apranq " + productcost + " vchareq");
+            } else if (vchar==2 && (product == 1 || product == 2)){
+                productcost = productcost - productcost * 30 / 100;
+                alert("vercreq apranq " + productcost + " poxanceq hashvin");
+            } else if (vchar==2 && product == 3){
+                productcost = productcost - productcost * 5 / 100;
+                alert("vercreq apranq " + productcost + " poxanceq hashvin")
+            }
+            alert ('duq gnel eq ' + product + ' apranqy ' + productcost + ' dramov')
+            
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
